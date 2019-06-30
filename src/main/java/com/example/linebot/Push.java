@@ -11,4 +11,21 @@ public class Push {
     public String hello(HttpServletRequest request){
         return "Get form:" + request.getRequestURL();
     }
+
+    public String pushAnalog(){
+        Judge judge = new Judge();
+        return "状態は..." +judge.analog_data_analysis();
+    }
+
+    public String pushHumidity(){
+        return "";
+    }
+
+    public String pushCelsius_degree(){
+        return "";
+    }
+
+    public String pushMoisture(){
+        return "";
+    }
 }

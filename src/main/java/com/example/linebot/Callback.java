@@ -79,6 +79,8 @@ public class Callback {
         switch (text) {
             case "温度":
                 return celsius_degree();
+            case "操作":
+                return description();
             case "湿度":
                 return humidity();
             case "光":

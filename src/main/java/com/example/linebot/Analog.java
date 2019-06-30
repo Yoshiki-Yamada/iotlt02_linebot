@@ -2,7 +2,7 @@ package com.example.linebot;
 
 import com.linecorp.bot.model.message.TextMessage;
 
-public class Analog {
+public class Analog extends Judge{
     private float analog;
 
     public float getAnalog(){
@@ -20,4 +20,5 @@ public class Analog {
         else if (analog > 0){return "もう限界、このままだと死んでしまう、なんとかしてください。";}
         else return "";
     }
+
 }
