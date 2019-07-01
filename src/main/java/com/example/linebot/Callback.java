@@ -79,7 +79,7 @@ public class Callback {
         switch (text) {
             case "温度":
                 return celsius_degree();
-            case "操作":
+            case "ヘルプ":
                 return description();
             case "湿度":
                 return humidity();
@@ -87,7 +87,7 @@ public class Callback {
                 return analog();
             case "水分":
                 return moisture();
-            case "報告":
+            case "メニュー":
                 return get();
             default:
                 return reply(text);
@@ -101,8 +101,8 @@ public class Callback {
                 "・「湿度」-> 湿度がわかる。" +"\n"+
                 "・「光」-> 光の量がわかる。"+"\n"+
                 "・「水分」-> 土の湿り気がわかる。"+"\n"+
-                "・「報告」-> 植物の状態を共有するためのツールバー。"+"\n"+
-                "・「説明」-> 操作説明を表示する。"+"\n");
+                "・「メニュー」-> 植物の状態を共有するためのツールバー。"+"\n"+
+                "・「ヘルプ」-> 操作説明を表示する。"+"\n");
     }
 
     public TextMessage humidity(){
@@ -197,7 +197,19 @@ public class Callback {
     public Message get() {
         final List<QuickReplyItem> items = Arrays.<QuickReplyItem>asList(
                 QuickReplyItem.builder()
-                        .action(new MessageAction("gishi-yama", "https://github.com/gishi-yama/linebot-java-handson"))
+                        .action(new MessageAction("光量を確認", "光"))
+                        .build(),
+                QuickReplyItem.builder()
+                        .action(new MessageAction("水分量を確認", "水分"))
+                        .build(),
+                QuickReplyItem.builder()
+                        .action(new MessageAction("温度を確認", "温度"))
+                        .build(),
+                QuickReplyItem.builder()
+                        .action(new MessageAction("湿度を確認", "湿度"))
+                        .build(),
+                QuickReplyItem.builder()
+                        .action(new MessageAction("ヘルプを表示", "ヘルプ"))
                         .build(),
                 QuickReplyItem.builder()
                         .action(CameraAction.withLabel("植物の写真を撮ろう！"))
