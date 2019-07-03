@@ -10,14 +10,14 @@ public class Judge {
         else return "";
     }
 
-    public String moisture_data_analysis(){
-        Analog analog = new Analog();
-        if (analog.getAnalog() > 20){return "お水がたくさんあります！！やっぱり疲れた時のお水は身に沁みるわー！！！";}
-        else if (analog.getAnalog() > 10){return "まあ、普通くらいですかね。";}
-        else if (analog.getAnalog() > 5){return "喉乾いたよー水をくださいなー";}
-        else if (analog.getAnalog() > 0){return "やばい..もう死ぬ。。水を..くだ..さ..い...";}
-        else return "";
-    }
+//    public String moisture_data_analysis(){
+//        Analog analog = new Analog();
+//        if (analog.getAnalog() > 20){return "お水がたくさんあります！！やっぱり疲れた時のお水は身に沁みるわー！！！";}
+//        else if (analog.getAnalog() > 10){return "まあ、普通くらいですかね。";}
+//        else if (analog.getAnalog() > 5){return "喉乾いたよー水をくださいなー";}
+//        else if (analog.getAnalog() > 0){return "やばい..もう死ぬ。。水を..くだ..さ..い...";}
+//        else return "";
+//    }
 
     public String celsius_degree_data_analysis(){
         Analog analog = new Analog();
@@ -27,6 +27,7 @@ public class Judge {
         else if (analog.getAnalog() > 0){return "ここは、北極ですかー？？あ、葉っぱが凍ってきた。。。";}
         else return "";
     }
+
 
     public String humidity_data_analysis(){
         Analog analog = new Analog();
